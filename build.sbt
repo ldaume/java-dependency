@@ -37,7 +37,7 @@ autoScalaLibrary := false
 
 resolvers ++= Seq(
   Resolver.mavenLocal,
-  "ReInvent Software OSS" at "https://maven.reinvent-software.de/nexus/content/repositories/public"
+  "ReInvent Software OSS" at "https://maven.reinvent-software.de/nexus/content/groups/public"
 )
 
 
@@ -51,7 +51,7 @@ libraryDependencies ++= Seq(
   "com.typesafe" % "config" % "1.3.1",
   "org.unbescape" % "unbescape" % "1.1.4.RELEASE",
   "com.github.rholder" % "guava-retrying" % "2.0.0" exclude("com.google.guava", "guava"),
-  
+
   // READABILITY
   "com.github.mfornos" % "humanize-slim" % "1.2.2" exclude("com.google.guava", "guava"),
 
@@ -69,4 +69,3 @@ libraryDependencies ++= Seq(
 )
 
 scalacOptions in Test ++= Seq("-Yrangepos")
-
