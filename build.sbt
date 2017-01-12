@@ -44,23 +44,9 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
 
   // Commons
-  "org.apache.commons" % "commons-lang3" % "3.5",
-  "com.google.guava" % "guava" % "20.0",
-  "org.apache.commons" % "commons-collections4" % "4.1",
-  "commons-io" % "commons-io" % "2.5",
-  "com.typesafe" % "config" % "1.3.1",
-  "org.unbescape" % "unbescape" % "1.1.4.RELEASE",
-  "com.github.rholder" % "guava-retrying" % "2.0.0" exclude("com.google.guava", "guava"),
+  "software.reinvent" % "commons" % "latest.release",
 
-  // READABILITY
-  "com.github.mfornos" % "humanize-slim" % "1.2.2" exclude("com.google.guava", "guava"),
-
-
-  // LOGGING
-  "ch.qos.logback" % "logback-classic" % "1.1.8",
-  "ch.qos.logback" % "logback-core" % "1.1.8",
-
-
+  
   // TEST
   "org.assertj" % "assertj-core" % "3.6.1" % "test",
   "org.assertj" % "assertj-guava" % "3.1.0" % "test" exclude("com.google.guava", "guava"),
@@ -69,3 +55,7 @@ libraryDependencies ++= Seq(
 )
 
 scalacOptions in Test ++= Seq("-Yrangepos")
+
+dependencyUpdatesFailBuild := true
+
+dependencyUpdatesExclusions := moduleFilter(organization = "software.reinvent")
