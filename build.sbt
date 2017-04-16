@@ -4,7 +4,7 @@ name := """java-dependency"""
 // orgnization name (e.g., the package name of the project)
 organization := "software.reinvent"
 
-version := "0.1.0-SNAPSHOT"
+version := "0.1.1"
 
 scalaVersion := "2.12.1"
 
@@ -44,18 +44,18 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
 
   // Commons
-  "software.reinvent" % "commons" % "latest.release",
+  "software.reinvent" % "commons" % "0.3.1",
 
-  
+
   // TEST
-  "org.assertj" % "assertj-core" % "3.6.1" % "test",
+  "org.assertj" % "assertj-core" % "3.6.2" % "test",
   "org.assertj" % "assertj-guava" % "3.1.0" % "test" exclude("com.google.guava", "guava"),
   "com.novocode" % "junit-interface" % "0.11" % "test->default",
-  "org.jukito" % "jukito" % "1.4.1" % "test"
+  "org.jukito" % "jukito" % "1.5" % "test"
 )
 
 scalacOptions in Test ++= Seq("-Yrangepos")
 
 dependencyUpdatesFailBuild := true
 
-dependencyUpdatesExclusions := moduleFilter(organization = "software.reinvent")
+//dependencyUpdatesExclusions := moduleFilter(organization = "software.reinvent")
