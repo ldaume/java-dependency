@@ -3,10 +3,10 @@ Java Dependency
 
 # Abstract
 
-An easy starting point for a java dependency as a [template](https://www.lightbend.com/activator/template/java-dependency) which can be used with [Lightbend Activator](https://www.lightbend.com/activator/templates).
+An easy starting point for a java dependency as a [Giter8](http://www.foundweekends.org/giter8/) template which can be used with [sbt](http://www.scala-sbt.org/).
 
 # Template Usage
-`activator new PROJECTNAME java-dependency`
+`sbt new ldaume/java-dependency.g8 --name=java-dependency`
 
 # Usage
 
@@ -24,3 +24,5 @@ To deploy to remote Maven repository:
 
 To deploy to local maven repository:
 `sbt publish-local`
+
+
