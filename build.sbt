@@ -1,61 +1,12 @@
-// Project name (artifact name in Maven)
-name := """java-dependency"""
-
-// orgnization name (e.g., the package name of the project)
-organization := "software.reinvent"
-
-version := "0.1.1"
-
-scalaVersion := "2.12.1"
-
-// project description
-description := "Template for a sbt/maven dependency."
-
-// Enables publishing to maven repo
-publishMavenStyle := true
-publishArtifact in Test := false
-pomIncludeRepository := { _ => false }
-
-publishTo := {
-  val nexus = "https://maven.reinvent-software.de/nexus/"
-  if (version.value.trim.endsWith("SNAPSHOT"))
-    Some("snapshots" at nexus + "content/repositories/snapshots")
-  else
-    Some("releases" at nexus + "content/repositories/releases")
-}
-
-overridePublishBothSettings
-
-credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
-
-// Do not append Scala versions to the generated artifacts
-crossPaths := false
-
-// This forbids including Scala related libraries into the dependency
-autoScalaLibrary := false
-
-
-resolvers ++= Seq(
-  Resolver.mavenLocal,
-  "ReInvent Software OSS" at "https://maven.reinvent-software.de/nexus/content/groups/public"
-)
-
-
-libraryDependencies ++= Seq(
-
-  // Commons
-  "software.reinvent" % "commons" % "0.3.1",
-
-
-  // TEST
-  "org.assertj" % "assertj-core" % "3.6.2" % "test",
-  "org.assertj" % "assertj-guava" % "3.1.0" % "test" exclude("com.google.guava", "guava"),
-  "com.novocode" % "junit-interface" % "0.11" % "test->default",
-  "org.jukito" % "jukito" % "1.5" % "test"
-)
-
-scalacOptions in Test ++= Seq("-Yrangepos")
-
-dependencyUpdatesFailBuild := true
-
-//dependencyUpdatesExclusions := moduleFilter(organization = "software.reinvent")
+// This build is for this Giter8 template.
+// To test the template run `g8` or `g8Test` from the sbt session.
+// See http://www.foundweekends.org/giter8/testing.html#Using+the+Giter8Plugin for more details.
+lazy val root = (project in file(".")).
+  settings(
+    name := "java-dependency",
+    test in Test := {
+      val _ = (g8Test in Test).toTask("").value
+    },
+    scriptedLaunchOpts ++= List("-Xms1024m", "-Xmx1024m", "-XX:ReservedCodeCacheSize=128m", "-XX:MaxPermSize=256m", "-Xss2m", "-Dfile.encoding=UTF-8"),
+    resolvers += Resolver.url("typesafe", url("http://repo.typesafe.com/typesafe/ivy-releases/"))(Resolver.ivyStylePatterns)
+  )
