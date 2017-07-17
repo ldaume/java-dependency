@@ -1,4 +1,4 @@
-package $organization$.$name$;
+package $package$;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
