@@ -1,10 +1,11 @@
 // Project name (artifact name in Maven)
-name := """java-dependency"""
+name := "$name$"
+version := "$version$"
 
 // orgnization name (e.g., the package name of the project)
-organization := "software.reinvent"
+organization := "$organization$"
 
-version := "0.1.1"
+version := "$version$"
 
 scalaVersion := "2.12.1"
 

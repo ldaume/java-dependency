@@ -1,4 +1,4 @@
-package software.reinvent.dependency;
+package $organization$.$name$;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
