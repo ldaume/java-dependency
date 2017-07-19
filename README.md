@@ -1,6 +1,6 @@
 | Dependencies UpToDate | License |
 |:---------------------:|:-------:|
-| [![Dependencies UpToDate](https://ci.reinvent-software.de/buildStatus/icon?job=Commons-DependencyCheck)](https://ci.reinvent-software.de/job/java-dependency-template) | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+| [![Dependencies UpToDate](https://ci.reinvent-software.de/buildStatus/icon?job=Commons-DependencyCheck)](https://ci.reinvent-software.de/job/java-dependency-template-DependencyCheck) | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
 
 Java Dependency Template
 ==========
