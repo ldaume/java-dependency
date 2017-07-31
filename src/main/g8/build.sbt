@@ -3,7 +3,7 @@ name := "$name$"
 version := "$version$"
 organization := "$organization$"
 
-scalaVersion := "2.12.1"
+scalaVersion := "2.12.3"
 
 // project description
 description := "Template for a sbt/maven dependency."
@@ -41,7 +41,7 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
 
   // Commons
-  "software.reinvent" % "commons" % "0.3.3",
+  "software.reinvent" % "commons" % "0.3.4",
 
 
   // TEST
