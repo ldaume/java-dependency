@@ -41,7 +41,7 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
 
   // Commons
-  "software.reinvent" % "commons" % "0.3.4",
+  "software.reinvent" % "commons" % "0.3.5",
 
 
   // TEST
