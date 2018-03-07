@@ -1,5 +1,5 @@
 // Enables publishing to maven repo
-version in ThisBuild := s"${version.value}"
+version in ThisBuild := s"\${version.value}"
 
 publishMavenStyle := true
 publishArtifact in Test := false
