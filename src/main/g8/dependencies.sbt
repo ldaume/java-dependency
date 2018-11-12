@@ -1,14 +1,16 @@
 libraryDependencies ++= Seq(
 
   // Commons
-  "software.reinvent" % "commons" % "0.3.9",
+  "software.reinvent" % "commons" % "0.3.12",
 
 
   // TEST
-  "org.assertj" % "assertj-core" % "3.9.1" % "test",
-  "org.assertj" % "assertj-guava" % "3.1.0" % "test" exclude("com.google.guava", "guava"),
-  "com.novocode" % "junit-interface" % "0.11" % "test->default",
-  "org.jukito" % "jukito" % "1.5" % "test"
+  "com.novocode" % "junit-interface" % "0.11" % Test,
+  "org.junit.jupiter" % "junit-jupiter-api" % "5.3.1" % Test,
+  "org.assertj" % "assertj-core" % "3.11.1" % Test,
+  "org.assertj" % "assertj-guava" % "3.2.0" % Test exclude("com.google.guava", "guava"),
+  "net.javacrumbs.json-unit" % "json-unit" % "2.0.3" % Test,
+  "net.javacrumbs.json-unit" % "json-unit-assertj" % "2.0.3" % Test
 )
 
 dependencyUpdatesFailBuild := true
