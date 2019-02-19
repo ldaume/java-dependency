@@ -1,3 +1,5 @@
+import sbt._
+
 // Enables publishing to maven repo
 version in ThisBuild := s"\${version.value}"
 
